@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form p-10 text-white">
+            <form action="">
+                <input class="block w-full rounded-md outline-none bg-zinc-800 px-5 py-2  " type="text" placeholder="Title goes Here">
+                <textarea class="block w-full rounded-md outline-none bg-zinc-800 px-5 py-2 mt-2 resize-none " placeholder="Write your task details"></textarea>
+                <input class="mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Create task">
+            </form>
+        </div>
+        <div class="task flex gap-3 flex-wrap p-10">
+            <div class="task hidden w-72 px-3 py-4 rounded-md bg-zinc-800">
+                <h1 class="text-white text-3xl tracking-tighter ">Some task goes here.</h1>
+                <a class="text-blue-500 inline-block mt-2" href="">Read More</a>
+            </div>
+            <div class="task hidden w-72 px-3 py-4 rounded-md bg-zinc-800">
+                <h1 class="text-white text-3xl tracking-tighter ">Some task goes here.</h1>
+                <a class="text-blue-500 inline-block mt-2" href="">Read More</a>
+            </div>
+            <div class="task hidden w-72 px-3 py-4 rounded-md bg-zinc-800">
+                <h1 class="text-white text-3xl tracking-tighter ">Some task goes here.</h1>
+                <a class="text-blue-500 inline-block mt-2" href="">Read More</a>
+            </div>
+            <h3 class="text-gray-600">No tasks yet.</h3>
+        </div>
+    </div>
+</body>
+</html>
