@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname,"public")))
 
 
 app.get('/', (req, res) => {
-    fs.readdir(`./files`, (err, files)=> {
+    fs.readdir(`./files`, (err, files)=> {//yaha par indexejs render ho ra hai
         res.render("index", {files: files})
     })
 })
@@ -23,9 +23,15 @@ app.get('/files/:filename', (req, res) => {
 
 app.get('/edit/:filename', (req, res) => {
 
-        res.render('edit',{filename: req.params.filename} )
+    res.render('edit',{filename: req.params.filename} )
  
     
+})
+
+app.post('/edit', (req, res) => {
+     fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}`, (err) => {
+        res.redirect("/")
+     })
 })
 
 
